@@ -7,6 +7,7 @@ function calculatorFactory() {
         init() {
             this.clickButton();
             this.clearDisplay();
+            this.enterPressed();
         },
 
         enterPressed() {
@@ -59,6 +60,8 @@ function calculatorFactory() {
                 if (el.classList.contains('btn-eq')) {
                     this.calculate();
                 }
+
+                this.display.focus();
             });
         },
 
